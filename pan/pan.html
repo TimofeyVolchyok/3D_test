@@ -1,0 +1,64 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виртуальная эскпозиция "память"</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <link rel="stylesheet" href="pan.css">
+    <link rel="stylesheet" href="../index.css">
+    <style>
+    #panorama {
+        width: 100%;
+        height: 90%;
+    }
+    </style>
+</head>
+<body>
+<div class="navigation">
+    <div class="yzor"></div>
+    <ul>
+        <li><a href="index.html">Галоўная</a></li>
+        <li><a href="hall1.html">Першая Зала</a></li>
+        <li><a href="items.html">Другая Зала </a></li>
+        <li><a href="halls2.html">Трэцяя зала</a></li>
+        <li><a href="photo.html">Фота i кантакты</a></li>
+    </ul>
+    <div class="yzor"></div>
+</div>
+<div id="panorama">
+  <div class="choose">
+    <button onclick="first()">Зала 1</button>
+    <button onclick="second()">Зала 2</button>
+    <button onclick="third()">Зала 3</button>
+  </div>
+</div>
+<script>
+pannellum.viewer('panorama', {
+    "type": "equirectangular",
+    "panorama": "./pan.jpg",
+    "autoLoad": true
+});
+function first(){
+  console.log(1);
+  pannellum.viewer('panorama', {
+    "type": "equirectangular",
+    "panorama": "./pan.jpg",
+    "autoLoad": true
+})};
+function second(){
+  pannellum.viewer('panorama', {
+    "type": "equirectangular",
+    "panorama": "./pan2.jpg",
+    "autoLoad": true
+})};
+function third(){
+  pannellum.viewer('panorama', {
+    "type": "equirectangular",
+    "panorama": "./pan3.jpg",
+    "autoLoad": true
+})};
+</script>
+
+</body>
+</html>
